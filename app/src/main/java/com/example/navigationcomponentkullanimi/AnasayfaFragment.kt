@@ -23,6 +23,12 @@ class AnasayfaFragment : Fragment() {
             val gecis = AnasayfaFragmentDirections.detayGecis(urun = urun,ad = "Tuba",yas = 23, boy = 1.56f, bekar = true)
             Navigation.findNavController(it).navigate(gecis)
         }
+
+        binding.buttonGoster.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.bottomSheetGecis)
+
+        }
+
         return binding.root
     }
 
